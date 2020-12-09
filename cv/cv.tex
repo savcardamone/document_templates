@@ -1,0 +1,228 @@
+\documentclass[11pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.0cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+\usepackage{scrextend}
+
+\setlength{\parindent}{0pt}
+
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+
+\begin{minipage}[t]{0.49\textwidth}
+\vspace{0pt}
+{\huge{Salvatore Cardamone}}\\ % Your name
+{\color{headings} \Large{Curriculum Vitae}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\vspace{1pt}
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{7cm}}
+\raisebox{-3pt}{\textifsymbol{18}} & 11 Lantern Court, CB7 4JR \\ % Address
+\raisebox{-2pt}{\Mobilefone} & +44 (0)7794 798 945 \\ % Phone number
+\raisebox{-1pt}{\Letter} & \href{mailto:sc2018@cam.ac.uk}{sav.cardamone@gmail.com} \\ % Email address
+\end{tabular}
+}}\\[10pt]
+\end{minipage}\\
+
+
+
+
+\section{Employment}
+\begin{tabular}{rl}
+2021 -- Present & \textbf{Senior Signal Processing Engineer, CoMind Technologies}\\
+&Brain-Computer interfaces.\\
+&\\
+2018 -- 2021 & \textbf{Senior Engineer, Cambridge Consultants Ltd}\\
+&My work largely deals with the physical layer in 5G, recent projects including:\\
+&\hspace{5mm}*\hspace{3mm}Porting of performance critical sections of PXSCH to CUDA.\\
+&\hspace{5mm}*\hspace{3mm}Development of in-house implementation of the full NR PHY (primarily FEC\\
+&\hspace{5mm}\hphantom{*}\hspace{3mm}and channel estimation/ equalisation) for an embedded platform.\\
+&\hspace{5mm}*\hspace{3mm}Benchmarking throughput of LDPC codec on a CEVA DSP.\\
+&I have worked on other wireless standards (BR/EDR and BLE) for low-power embedded\\ 
+&systems. I have been involved in the winning and subsequent completion of work\\ 
+&commissioned by a multinational hardware vendor, concerning the appraisal of a novel\\ 
+&SIMD HPC platform for specific workloads in geophysical resource exploration.\\
+&\\
+2016 -- 2018 & \textbf{Postdoctoral Research Associate, The University of Cambridge}\\
+& Postdoctoral research associate with Dr Alex Thom, working on the acceleration of\\ 
+&common HPC workloads in computational chemistry with dataflow FPGAs. This involved\\ 
+&the design of benchmarks using conventional multithreaded/ multicore systems and GPUs,\\ 
+&and optimisation of algorithms/ memory-access patterns for each platform. I was\\ 
+&involved in discussions with Maxeler Technologies, giving feedback on useful features\\ 
+&that could be incorporated into their high-level synthesis toolchain to facilitate the\\ 
+&porting of academic HPC codebases to their platform.\\
+\end{tabular}
+\\
+
+\section{Education} 
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+2012 -- 2016 & \textbf{Doctor of Philosophy} \\ 
+& \textsc{Theoretical Chemistry} \textit{The University of Manchester}\\
+&Researched the use of machine learning in computational chemistry to aid in the prediction\\ 
+&of atomic multipole moments, obtained through Bader decomposition, as a function of molecular\\
+&conformation. I worked with novel domain of application metrics to quantify the validity\\
+&of training sets on-the-fly, and consequent iterative training set refinement strategies.\\
+&\\
+
+2009 -- 2012 & \textbf{Bachelor of Science}, 1\textsuperscript{st} Class (Hons)\\ 
+& \textsc{Biochemistry}, \textit{The University of Sheffield}\\
+
+\end{tabular}\\[10pt]
+
+\section{Computer Skills} 
+
+\begin{tabular}{rl}
+\textbf{Fluent}
+&C, C++17, bash, \textsc{FORTRAN90}, MATLAB, python, git, OpenCL,\\ 
+&CUDA, MPI, OpenMP\\ 
+\textbf{Competent}
+& perl, \LaTeX, java, Haskell, VHDL\\
+\end{tabular}
+\\
+
+\newpage
+
+\section{Awards and Prizes} 
+\begin{tabular}{rl}
+
+\textsc{July 2015} & \large{\textbf{BBSRC Funded Studentship}}\\
+& \textit{Daresbury National Laboratory, Warrington}\\
+& Implemented a novel isokinetic ensemble thermostatting methodology within the\\ &framework of the DL\_POLY molecular dynamics package.\\
+\\
+
+\textsc{Summer 2011} & \large{\textbf{The Biochemical Society Bursary Award}}\\
+& \textit{Waltho Lab, University of Sheffield}\\
+& Performed molecular dynamics simulations on phosphoglucokinase.\\
+\\
+
+\textsc{Summer 2007} & \large{\textbf{The Nuffield Foundation Scholarship}}\\
+& \textit{Loadman Lab, Bradford Institute for Cancer Therapeutics}\\
+& Evaluated the efficacy of a tumour-specific compound targeting matrix metalloproteinases.\\
+\\
+
+\end{tabular}
+
+\section{Conferences}
+
+\begin{tabular}{rl}
+	\textsc{talks} 
+    & \textbf{FPL, 2018}, \textit{Dublin, Ireland}\\
+    & FPGAs and Quantum Monte Carlo: Automated Porting using CAOS\\
+    & \textbf{Paderborn Centre for Parallel Computing, 2018}, \textit{Paderborn, Germany}\\
+    & FPGAs in a Multiprocessing Environment for Quantum Monte Carlo\\
+	& \textbf{Xilinx, 2018}, \textit{Dublin, Ireland}\\
+    & Numerical Precision in Quantum Monte Carlo and Importance for FPGAs\\
+    & \textbf{HiPEAC, 2017}, \textit{St\"{o}ckholm, Sweden}\\
+    & FPGA Acceleration of Diffusion Monte Carlo\\
+    & \textbf{Symposium on Computational Chemistry, 2015}, \textit{Manchester, UK}\\
+    & Conformational Sampling of Vibrational Modes for Machine Learning\\
+    \\
+    \textsc{posters} & \textbf{ACS National Meeting 2016}, \textit{San Diego, USA}\\
+    & A Novel Domain of Application for Machine Learning\\
+    & \textbf{Quantum Monte Carlo Conference}, \textit{Tuscany, Italy}\\
+    & An Analysis of Bader Decompositions of Molecular Systems at Various Levels of Theory\\
+\end{tabular}\\
+
+\section{Teaching Experience}
+
+\textbf{University of Cambridge}\\
+Academic supervisor for the third year courses:
+\begin{itemize}
+	\item Theoretical Techniques (A4)
+    \item Perturbation Theory and Further Quantum Mechanics (B7)
+    \item Electronic Structure Theory (C6)
+\end{itemize}
+Have supervised a summer student and an MPhil candidate in our lab, both completing successful projects in quantum chemistry/ software development. Also a senior laboratory demonstrator for computational and theoretical laboratories in chemistry part of natural sciences tripos.\\
+\\
+\textbf{University of Manchester}\\
+Supervised two successful Masters students over the course of my PhD, one of which resulted in an academic publication.\\
+
+
+\section{Extracurricular Activities} 
+
+Along with my dance partner, I was the national pre-amateur champion in ballroom dancesport. We competed internationally in China and mainland Europe. I was the president of the ballroom and latin dancesport societies at both the Universities of Manchester and Sheffield. I am a fluent speaker of Italian and am competent in French.
+
+\newpage
+
+\begin{minipage}[t]{0.49\textwidth}
+\vspace{0pt}
+{\huge{Salvatore Cardamone}}\\ % Your name
+{\color{headings} \Large{Academic Publications}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\vspace{2cm}
+%\colorbox{shade}{\textcolor{text1}{
+%\begin{tabular}{c|p{7cm}}
+%\raisebox{-3pt}{\textifsymbol{18}} & 54 Howard Road, Cambridge, CB5 8QP \\ % Address
+%\raisebox{-2pt}{\Mobilefone} & +44 (0)7794 798 945 \\ % Phone number
+%\raisebox{-1pt}{\Letter} & \href{mailto:sc2018@cam.ac.uk}{sc2018@cam.ac.uk} \\ % Email address
+%\end{tabular}
+%}}\\[10pt]
+\end{minipage}\\
+\section{Publications to Date} 
+
+Those publications for which I have conducted the majority of work have been labeled with an asterisk.\\
+
+Peverelli, F, Rabozzi, M, Cardamone, S, Del Sozzo, E, Thom, AJWT, Santambrogio, MD \& Di Tucci, L, Automated Acceleration of Dataflow-Oriented C Applications on FPGA-Based Systems, \textit{IEEE 27\textsuperscript{th} Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)}, \textbf{2019}\\
+
+*Cardamone S, Kimmitt JRR, Burton HGA, Todman TJ, Li S, Luk, W \& Thom AJWT, Field-Programmable Gate Arrays and Quantum Monte Carlo: Power Efficient Co-processing for Scalable High-Performance Computing, \textit{International Journal of Quantum Chemistry}, \textbf{2019}, 119(12), 12817 \\
+
+Jensen K, Benson R, Cardamone S \& Thom AJWT, Simple and Fast Quasidiabats from Self-Consistent Field Metadynamics, \textit{Journal of Chemical Theory and Computation}, , \textbf{2018}, 14(9), 4269-4639 \\
+
+Zielinski F et al., Geometry Optimization with Machine Trained Topological Atoms, \textit{Nature Scientific Reports}, \textbf{2017}, 7(1), 12817 \\
+
+*Cardamone S, Caine B, Blanch E \& Popelier PLA, The Computational Prediction of Raman and ROA Spectra of Charged Histidine Tautomers in Aqueous Solution, \textit{Physical Chemistry Chemical Physics}, \textbf{2016}, 18(39), 27377-27389 \\
+
+Maxwell P, Cardamone S \& Popelier PLA, The Prediction of Topologically Partitioned Intra-Atomic and Inter-Atomic Energies by the Machine Learning Method Kriging, \textit{Theoretical Chemistry Accounts}, \textbf{2016}, 135(8), 195-210\\
+
+*Cardamone S \& Popelier PLA, Prediction of Conformationally Dependent Atomic Multipole Moments in Carbohydrates, \textit{Journal of Computational Chemistry}, \textbf{2015}, 36(32), 2361-2373\\
+
+*Hughes T, Cardamone S \& Popelier PLA, Realistic Sampling of Amino Acid Geometries for a Multipolar Polarizable Force Field, \textit{Journal of Computational Chemistry}, \textbf{2015}, 36(24), 1844-1857\\
+
+*Cardamone S, Hughes T \& Popelier PLA, Multipolar Electrostatics, \textit{Physical Chemistry Chemical Physics}, \textbf{2014}, 16(22), 10367-10387\\
+
+\end{document}  
