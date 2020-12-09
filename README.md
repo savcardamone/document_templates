@@ -4,7 +4,7 @@ To install LaTeX and all the packages needed to build the documents in this repo
 you can go the overkill route and issue:
 
 ```bash
-$> sudo apt install texlive texlive-fonts-extra texlive-latex-extra texlive-xetex
+$> sudo apt install texlive texlive-fonts-extra texlive-latex-extra texlive-xetex texlive-publishers
 ```
 
 (Note that this comes to roughly 2GB, much of which is contained in `texlive-fonts-extra`).
